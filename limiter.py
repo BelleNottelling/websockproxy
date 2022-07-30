@@ -9,6 +9,7 @@ class RateLimitingState(object):
         self.last_check = time.time()
 
     def do_throttle(self, message):
+        return True
         current = time.time()
         time_passed = current - self.last_check
 
